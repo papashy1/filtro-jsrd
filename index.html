@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>FILTRO1</title>
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark m-1 border-bottom border-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand">CAMPUS GAMESOFT
+                <i class="fa-regular fa-chess-king fa-lg mx-2" style="color: #c5c9ce;"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fa-solid fa-bars" style="color: #1a5fb4"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0    mx-auto">
+                    <li class="nav-item">
+                        <a href="./index.html">
+                            <button class="btn btn-primary m-2" type="button">Gestión de Clientes</button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./gestionVJ.html">
+                            <button class="btn btn-primary m-2" type="button">Gestión de Video Juegos!</button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./comprasVJ.html">
+                            <button class="btn btn-primary m-2" type="button">Compra de Video Juegos!</button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./moduloDF.html">
+                            <button class="btn btn-primary m-2" type="button">Sistema de Fidelidad</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Numero de identificacion</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Fecha de nacimiento</th>
+                    <th scope="col">Nacionalidad</th>
+                </tr>
+            </thead>
+            <tbody id="tabla1"></tbody>
+        </table>
+        <div class="text-center py-2 px-4">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" aria-label="Search" id="buscador1"
+                    placeholder=" Escribe como quieres buscar al cliente con una de las siguites opciones: (  Nombres )  ( Apellidos )  ( Numero de identificacion )" />
+                <button class="btn btn-primary m-1" type="button" id="buscar1">
+                    Buscar
+                </button>
+                <button class="fade btn btn-primary m-1" type="button" id="regresar1">
+                    Regresar
+                </button>
+            </form>
+            <button type="button" class="btn btn-primary m-4" data-bs-toggle="modal" data-bs-target="#Modal1">
+                Agregar Clientes
+            </button>
+            <button type="button" class="btn btn-primary m-4" data-bs-toggle="modal" data-bs-target="#Modal2">
+                Modificar Clientes
+            </button>
+            <button type="button" class="btn btn-primary m-4" data-bs-toggle="modal" data-bs-target="#Modal3">
+                Eliminar Clientes
+            </button>
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="1000">
+                        <img src="./assets/camion.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./assets/juegos1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="./assets/hellraiser.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="./assets/juegos2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="./assets/Hellraiser30th.jpgg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="6000">
+                        <img src="./assets/palancas.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="7000">
+                        <img src="./assets/juegos3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="8000">
+                        <img src="./assets/pelea.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="9000">
+                        <img src="./assets/juegos4.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="ModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ModalLabel1">Nuevo Usuario<i class="fa-solid fa-user fa-lg mx-2"
+                            style="color: #124caf;"></i></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3 was-validation">
+                        <div class="col-md-6">
+                            <label class="form-label">Nombres</label>
+                            <input type="text" class="form-control" id="nombres1" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="apellidos1" />
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Correo</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
+                                    aria-describedby="basic-addon2" id="correo1" />
+                                <span class="input-group-text" id="basic-addon2">ejemplo@ejemplo.com</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Numero de identificacion</label>
+                            <input type="text" class="form-control" id="identificacion1" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Telefono</label>
+                            <input type="text" class="form-control" id="telefono1" />
+                        </div>
+                        <label class="form-label">Nacionalidad</label>
+                        <input class="form-control" list="datalistOptions" id="nacionalidad1" />
+                        <datalist class="desplegable" id="datalistOptions">
+                            <option value="Pastuso :D"></option>
+                            <option value="Ecuatoriano"></option>
+                            <option value="Estadounidense"></option>
+                            <option value="Venezolano"></option>
+                            <option value="Colombiano"></option>
+                        </datalist>
+
+                        <div class="col-md-12">
+                            <label class="form-label">Fecha de nacimiento</label>
+                            <div class="col-5">
+                                <input type="date" class="form-control" id="fecha1" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="agregar1" data-bs-dismiss="modal">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="ModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ModalLabel2">Ingrese el codio del cliente a modificar: </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Codigo" aria-label="First name"
+                                id="modificado">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal"
+                        data-bs-target="#Modal4" id="modificar1">Buscar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="ModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ModalLabel3">Ingrese el codigo del cliente a eliminar: </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="Codigo" aria-label="First name"
+                                id="eliminado">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                        id="eliminar1">Eliminar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Modal4" tabindex="-1" aria-labelledby="ModalLabel4" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ModalLabel4">Modificar Usuario<i
+                            class="fa-solid fa-user fa-lg mx-2" style="color: #124caf;"></i>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Nombres</label>
+                            <input type="text" class="form-control" id="nombres2" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="apellidos2" />
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Correo</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
+                                    aria-describedby="basic-addon2" id="correo2" />
+                                <span class="input-group-text" id="basic-addon2">@</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Numero de identificacion</label>
+                            <input type="text" class="form-control" id="identificacion2" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Telefono</label>
+                            <input type="text" class="form-control" id="telefono2" />
+                        </div>
+                        <label class="form-label">Nacionalidad</label>
+                        <input class="form-control" list="datalistOptions" id="nacionalidad2" />
+                        <datalist class="desplegable" id="datalistOptions">
+                            <option value="Pastuso :D"></option>
+                            <option value="Ecuatoriano"></option>
+                            <option value="Estadounidense"></option>
+                            <option value="Venezolano"></option>
+                            <option value="Colombiano"></option>
+                        </datalist>
+                        <div class="col-md-12">
+                            <label class="form-label">Fecha de nacimiento</label>
+                            <div class="col-5">
+                                <input type="date" class="form-control" id="fecha2" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        id="modificar_r">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./js/clientes.js"></script>
+    <script src="https://kit.fontawesome.com/755229d5b0.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
